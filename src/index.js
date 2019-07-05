@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
 import './index.styl'
+import Dossier from "./pages/Dossier/Dossier";
 
 ReactDOM.render(
-    <h1>Hello, world!</h1>,
+    <Dossier/>,
     document.getElementById('app')
 );
