@@ -1,10 +1,21 @@
 import React from 'react'
 
-export default ({ className, value, children, ...props }) => {
+export default class Textarea extends React.Component {
 
-    return (
-        <textarea className={className} value={value} {...props}>
-            {children}
-        </textarea>
-    )
+    render() {
+        const { className, value, onChange, ...props }= this.props;
+        return (
+            <textarea
+                className={className}
+                value={value}
+                onChange={this.handleChange}
+            >
+            </textarea>
+        )
+    }
+
+    handleChange= (evt) => {
+        const {name, onChange}= this.props;
+        onChange(name, evt.target.value);
+    }
 }

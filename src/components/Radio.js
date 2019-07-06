@@ -1,8 +1,24 @@
 import React from 'react'
 
-export default ({ className, children, ...props }) => {
+export default class Radio extends React.Component {
 
-    return (
-        <label className={className} {...props}>{children}</label>
-    )
+    render () {
+        const { children, className, name, checked }= this.props;
+        return (
+            <label className={className}>
+                <input
+                    type="radio"
+                    name={name}
+                    checked={checked}
+                    onChange={this.handleChange}
+                />
+                {children}
+            </label>
+        )
+    }
+
+    handleChange= (evt) => {
+        this.props.onChange(this.props.name, evt.target.checked);
+    }
+
 }
