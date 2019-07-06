@@ -1,17 +1,22 @@
-import React from 'react'
+import React from 'react';
+import './Checkbox.styl';
 
 export default class Checkbox extends React.Component {
 
     render () {
-        const { className, checked, label }= this.props;
+        const { checked, label }= this.props;
         return (
-            <label className={className}>
+            <label className="b-checkbox">
                 <input
+                    className="b-checkbox__input"
                     type="checkbox"
                     checked={checked}
                     onChange={this.handleChange}
                 />
-                <span dangerouslySetInnerHTML={{__html: label}}/>
+                <span
+                    className="b-checkbox__label"
+                    dangerouslySetInnerHTML={{__html: label}}
+                />
             </label>
         )
     }

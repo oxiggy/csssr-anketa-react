@@ -1,12 +1,15 @@
 import React from 'react'
+import './Field.styl'
 
 export default class Field extends React.Component {
 
     render() {
-        const { children, label, value, name, onChange, ...props }= this.props;
+        const { className, children, label, value, name, onChange, ...props }= this.props;
         return (
             <label className="b-field">
-                {label}
+                <div className="b-field__label">
+                    {label}
+                </div>
                 <input className="b-field__input" {...props} value={value} onChange={this.handleChange} />
                 {children}
             </label>

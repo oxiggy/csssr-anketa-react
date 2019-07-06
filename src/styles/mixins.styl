@@ -1,0 +1,20 @@
+_focused() {
+  outline: 0;
+  opacity: 0.62;
+}
+
+_visually-hidden() { // для того чтобы прятать что-то доступно (A11Y), самый бронебойный и самый совместимый со скринридерами и браузерами способ
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+container() {
+  max-width: 770px;
+  margin: 0 auto;
+}

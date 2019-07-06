@@ -1,16 +1,18 @@
 import React from 'react'
+import TextareaAutosize from 'react-autosize-textarea'
+import './Textarea.styl'
 
 export default class Textarea extends React.Component {
 
     render() {
-        const { className, value, onChange, ...props }= this.props;
+        const {  value, onChange, ...props }= this.props;
         return (
-            <textarea
-                className={className}
+            <TextareaAutosize
+                className="b-textarea"
                 value={value}
                 onChange={this.handleChange}
             >
-            </textarea>
+            </TextareaAutosize>
         )
     }
 

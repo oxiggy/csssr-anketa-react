@@ -1,27 +1,27 @@
 import React from 'react'
-import Radio from "./Radio.js";
+import Radio from "../Radio/Radio.js"
+import './RadioGroup.styl'
 
 export default class RadioGroup extends React.Component {
     render() {
-        const {className, name, items, onChange, ...props}= this.props;
+        const { name, items, onChange, ...props}= this.props;
         return (
-            <ul className={className} {...props}>
+            <div className="b-radio-group" {...props}>
                 {items && Object.keys(items).map((k, i) => {
                     const checked= items[k];
                     return (
-                        <li key={i}>
-                            <Radio
-                                groupName={name}
-                                name={k}
-                                checked={checked}
-                                onChange={this.handleChange}
-                            >
-                                {k}
-                            </Radio>
-                        </li>
+                        <Radio
+                            key={i}
+                            groupName={name}
+                            name={k}
+                            checked={checked}
+                            onChange={this.handleChange}
+                        >
+                            {k}
+                        </Radio>
                     )
                 })}
-            </ul>
+            </div>
         )
     }
 

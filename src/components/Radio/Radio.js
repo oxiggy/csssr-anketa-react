@@ -1,18 +1,19 @@
 import React from 'react'
+import './Radio.styl'
 
 export default class Radio extends React.Component {
 
     render () {
-        const { children, className, name, checked }= this.props;
+        const { children,  name, checked }= this.props;
         return (
-            <label className={className}>
-                <input
+            <label className="b-radio">
+                <input className="b-radio__input"
                     type="radio"
                     name={name}
                     checked={checked}
                     onChange={this.handleChange}
                 />
-                {children}
+                <span className="b-radio__label"> {children} </span>
             </label>
         )
     }

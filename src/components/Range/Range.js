@@ -1,8 +1,9 @@
 import React from 'react'
+import './Range.styl'
 
 export default ({ className, children, ...props }) => {
 
     return (
-        <header className={className} {...props}>{children}</header>
+        <div className={className} {...props}>{children}</div>
     )
 }

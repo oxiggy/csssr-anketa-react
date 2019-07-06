@@ -1,16 +1,17 @@
 import React from "react";
-import Page from "../../components/Page";
+import Page from "../../components/Page/Page";
+import Header from "../../components/Header/Header";
+import Main from "../../components/Main/Main";
+import Section from "../../components/Section/Section";
+import CheckboxList from "../../components/CheckboxList/CheckboxList";
+import Footer from "../../components/Footer/Footer";
+import Field from "../../components/Field/Field";
+import Range from "../../components/Range/Range";
+import Textarea from "../../components/Textarea/Textarea";
+import RadioGroup from "../../components/RadioGroup/RadioGroup";
+import Fieldset from "../../components/Fieldset/Fieldset";
+
 import './Dossier.styl';
-import Header from "../../components/Header";
-import Main from "../../components/Main";
-import Section from "../../components/Section";
-import CheckboxList from "../../components/CheckboxList";
-import Footer from "../../components/Footer";
-import Field from "../../components/Field";
-import Range from "../../components/Range";
-import Textarea from "../../components/Textarea";
-import RadioGroup from "../../components/RadioGroup";
-import Fieldset from "../../components/Fieldset";
 
 export default class Dossier extends React.Component {
 
@@ -61,10 +62,17 @@ export default class Dossier extends React.Component {
     render() {
         return (
             <Page className="b-dossier">
-                <Header/>
+                <Header>
+                    <img className="b-header__logo" src={require('../../images/logo.png')} alt={"CSSSR"}/>
+                    <img className="b-header__stamp" src={require('../../images/stamp.png')} alt={"СЕКРЕТНО. Заполнено собственноручно"}/>
+                    <h1 className="b-header__title">
+                        <img className="b-header__title-image" src={require('../../images/title.png')} alt={"Дело"}/>
+                    </h1>
+                </Header>
                 <Main>
 
                     <Section
+                        className="b-section_person"
                     >
                         <Fieldset legend={"Личные данные"}>
                             <Field
@@ -102,7 +110,7 @@ export default class Dossier extends React.Component {
 
                     </Section>
 
-                    <Section
+                    <Section className="b-section_checkboxes"
                         heading={<React.Fragment>Расскажите о&nbsp;себе чекбоксами</React.Fragment>}
                         text={<React.Fragment>Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не&nbsp;означает, что у&nbsp;вас меньше шансов стать одним из&nbsp;наших товарищей. Это означает, что вы&nbsp;будете получать те&nbsp;задачи, с&nbsp;которыми гарантировано будете справляться.</React.Fragment>}
                     >
@@ -113,13 +121,16 @@ export default class Dossier extends React.Component {
                         />
                     </Section>
 
-                    <Section heading={<React.Fragment>Уровень владения JavaScript</React.Fragment>}
+                    <Section
+                        className="b-section_level"
+                        heading={<React.Fragment>Уровень владения JavaScript</React.Fragment>}
                     >
                         <Range/>
 
                     </Section>
 
                     <Section
+                        className="b-section_words"
                         heading={<React.Fragment>Расскажите о&nbsp;себе словами</React.Fragment> }
                         text={<React.Fragment>Напишите пару предложений, чем вас привлекла наша вакансия и&nbsp;чего вы&nbsp;ожидаете от&nbsp;работы в&nbsp;CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</React.Fragment>}
                     >
@@ -131,6 +142,7 @@ export default class Dossier extends React.Component {
                     </Section>
 
                     <Section
+                        className="b-section_plans"
                         heading={<React.Fragment>Какие у&nbsp;вас планы на&nbsp;будущее?</React.Fragment> }
                         text={<React.Fragment>Этот ответ ни&nbsp;на&nbsp;что не&nbsp;повлияет. Не&nbsp;беда, если в&nbsp;будущем ваши планы поменяются.</React.Fragment>}
                     >

@@ -29,7 +29,9 @@
     "webpack-cli": "^3.3.4"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.8.6",
+    "react-autosize-textarea": "^7.0.0",
     "react-dom": "^16.8.6"
   }
 }
