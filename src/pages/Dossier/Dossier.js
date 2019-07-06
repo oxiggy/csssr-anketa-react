@@ -106,9 +106,10 @@ export default class Dossier extends React.Component {
                         heading={<React.Fragment>Расскажите о&nbsp;себе чекбоксами</React.Fragment>}
                         text={<React.Fragment>Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не&nbsp;означает, что у&nbsp;вас меньше шансов стать одним из&nbsp;наших товарищей. Это означает, что вы&nbsp;будете получать те&nbsp;задачи, с&nbsp;которыми гарантировано будете справляться.</React.Fragment>}
                     >
-                        <CheckboxList name="skills"
-                                      items={this.state.skills}
-                                      onChange={this.handleChange}
+                        <CheckboxList
+                             name="skills"
+                             items={this.state.skills}
+                             onChange={this.handleChange}
                         />
                     </Section>
 

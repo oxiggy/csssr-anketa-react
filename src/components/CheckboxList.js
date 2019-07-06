@@ -26,7 +26,7 @@ export default class CheckboxList extends React.Component {
     handleChange= (checkboxName, checked) => {
         const newItems= { ...this.props.items };
         newItems[checkboxName]= checked;
-        this.props.onChange(name, newItems);
+        this.props.onChange(this.props.name, newItems);
     }
 
 }
