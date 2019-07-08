@@ -1,4 +1,106 @@
 .b-range {
-
-
+  padding: 0 2px
 }
+
+.rangeslider
+  .rangeslider__fill
+    display none
+  .rangeslider__label-item
+    font-size 13px
+    font-weight bold
+    line-height 19px
+
+.rangeslider-horizontal
+  background transparent
+  height 40px
+  margin 0
+  margin-bottom 70px
+  border-radius: 0
+  box-shadow none
+  background-image url(../../images/range.png)
+  background-position 0 20px
+  background-repeat no-repeat
+
+.rangeslider-horizontal .rangeslider__handle
+  width 4px
+  height 40px
+  background transparent
+  border-radius 0
+  border none
+  box-shadow none
+
+  &:after
+    top 0
+    left -18px
+    width 39px
+    height 40px
+    background transparent
+    background-image url(../../images/range-handle.png)
+    background-position center 6px
+    background-repeat no-repeat
+    border-radius 0
+    box-shadow none
+
+.rangeslider-horizontal .rangeslider__labels
+  margin 0
+  top 41px
+
+.rangeslider-horizontal .rangeslider__labels .rangeslider__label-item
+  top 5px
+  font-size 13px
+  font-weight bold
+  line-height 19px
+  transform none
+  max-width 180px
+
+  &:before
+    display block
+    content ''
+    width 3px
+    height 25px
+    position absolute
+    top -25px
+    left -2px
+    background-image url(../../images/range-option-left.png)
+    background-position 0 0
+    background-repeat no-repeat
+
+  &:first-child
+    transform translate3d(-100%, 0, 0)
+    width 150px
+    text-align right
+    &:before
+      left auto
+      right -2px
+
+  &:not(:first-child):not(:last-child)
+    &:before
+      background-image url(../../images/range-option.png)
+
+.rangeslider-vertical
+  margin 0
+  margin-left 8px
+  margin-bottom 50px
+  background-image url(../../images/rotated-range.png)
+  background-position 6px 0
+  background-repeat no-repeat
+  border-radius 0
+  box-shadow none
+
+  .rangeslider__handle
+    height 1px
+    background transparent
+    border 0
+    &:after
+      display block
+      content ''
+      position absolute
+      top -14px
+      width 30px
+      height 31px
+      background transparent
+      background-image url(../../images/rotated-range-handle.png)
+      background-position 2px 6px
+      background-repeat no-repeat
+      border-radius 0
+      box-shadow none

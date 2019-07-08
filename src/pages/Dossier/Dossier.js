@@ -42,6 +42,7 @@ export default class Dossier extends React.Component {
             'Я ленивый(-ая)': false,
             'У меня хороший английский': false,
         },
+        level: 42,
         about: 'Мне понравилось ваше обманчиво простое тестовое задание, от работы ожидаю похожих интересных испытаний.',
         plans: {
             'Верстать': false,
@@ -125,8 +126,7 @@ export default class Dossier extends React.Component {
                         className="b-section_level"
                         heading={<React.Fragment>Уровень владения JavaScript</React.Fragment>}
                     >
-                        <Range/>
-
+                        <Range name="level" value={this.state.level} onChange={this.handleChange}/>
                     </Section>
 
                     <Section
